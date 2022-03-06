@@ -6,6 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'remix';
+import Footer from '~/components/Footer';
+import Header from '~/components/Header';
 import tailwind from './tailwind.css';
 
 import type { LinksFunction, MetaFunction } from 'remix';
@@ -14,7 +16,7 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: tailwind },
   {
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:400,700',
+    href: 'https://fonts.googleapis.com/css?family=Poppins:100,300|Open+Sans:400,700|Source+Code+Pro:400,700',
   },
 ];
 
@@ -31,8 +33,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans">
-        <Outlet />
+      <body className="flex flex-col font-sans bg-white">
+        <Header />
+        <main className="flex-grow flex flex-col">
+          <Outlet />
+        </main>
+        <Footer />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

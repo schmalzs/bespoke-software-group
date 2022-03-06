@@ -1,9 +1,11 @@
 module.exports = {
   content: ['./app/**/*.{ts,tsx}'],
   theme: {
-    colors: {},
+    colors: {
+      white: '#F7F5FB',
+    },
     fontFamily: {
-      sans: ['"Open Sans"', 'sans-serif'],
+      sans: ['Poppins', '"Open Sans"', 'sans-serif'],
     },
     extend: {},
   },
