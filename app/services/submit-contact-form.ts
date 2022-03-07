@@ -25,8 +25,10 @@ export default async function submitContactForm(
   };
 
   try {
-    await sgMail.send(msg);
-    console.info('Email sent');
+    if (process.env.DISABLE_EMAIL_SENDING !== 'true') {
+      await sgMail.send(msg);
+      console.info('Email sent');
+    }
   } catch (error) {
     console.error(error);
   }
