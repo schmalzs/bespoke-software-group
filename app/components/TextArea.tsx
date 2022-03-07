@@ -11,22 +11,15 @@ export default function TextArea({
   hasError,
   ...rest
 }: TextAreaProps) {
-  const [hasFocused, setHasFocused] = React.useState(false);
-
-  React.useEffect(() => {
-    if (hasError) setHasFocused(false);
-  }, [hasError]);
-
   return (
     <textarea
       className={cx(
         'border-[1px] border-gray outline-none p-2 rounded-lg focus:bg-super-light-react',
         {
-          'bg-super-light-red': hasError && !hasFocused,
+          'bg-super-light-red': hasError,
         },
         className
       )}
-      onFocus={() => setHasFocused(true)}
       {...rest}
     />
   );
