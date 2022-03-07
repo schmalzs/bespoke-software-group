@@ -20,7 +20,7 @@ export default async function submitContactForm(
   const msg = {
     to: process.env.BSG_EMAIL,
     from: 'noreply@bespokesoftwaregroup.com',
-    subject: 'Contact Form Submission',
+    subject: `Contact Form Submission (${formData.name})`,
     html,
   };
 
