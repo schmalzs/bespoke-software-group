@@ -59,16 +59,8 @@ export default function Index() {
         We help businesses build software.
       </h2>
       <div className="mt-2 md:mt-4">---</div>
-      <h3 className="text-md md:text-2xl mt-2 md:mt-4">
-        <a
-          className="font-extralight underline hover:text-react duration-200"
-          href="mailto:scott@bespokesoftwaregroup.com"
-        >
-          scott@bespokesoftwaregroup.com
-        </a>
-      </h3>
       <ContactForm
-        className="font-extralight mt-4 md:mt-8 px-6 w-full max-w-md text-md"
+        className="font-extralight mt-2 md:mt-4 px-6 w-full max-w-md text-md"
         actionData={actionData}
         transition={transition}
       />
