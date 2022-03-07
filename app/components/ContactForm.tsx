@@ -1,60 +1,61 @@
 import { Form } from 'remix';
+import TextArea from './TextArea';
+import TextBox from './TextBox';
 
 import type { Transition } from '@remix-run/react/transition';
 
 export default function ContactForm({
+  className,
   actionData,
   transition,
 }: {
+  className?: string;
   actionData: any;
   transition: Transition;
 }) {
   return (
-    <Form method="post">
+    <Form method="post" className={className}>
       <fieldset disabled={transition.state === 'submitting'}>
         <div className="flex flex-col">
-          <label>
+          <label className="my-2">
             Full Name
             <br />
-            <input
-              className="w-full border-2 border-gray"
+            <TextBox
+              className="w-full"
               type="text"
               name="name"
               defaultValue={actionData?.values.name}
+              hasError={!!actionData?.errors.name}
             />
           </label>
 
-          {actionData?.errors.name ? (
-            <p style={{ color: 'red' }}>{actionData.errors.name}</p>
-          ) : null}
-
-          <label>
+          <label className="my-2">
             Email
             <br />
-            <input
+            <TextBox
               className="w-full"
-              type="email"
+              type="text"
               name="email"
               defaultValue={actionData?.values.email}
+              hasError={!!actionData?.errors.email}
             />
           </label>
 
-          <label>
+          <label className="my-2">
             Message
             <br />
-            <textarea
+            <TextArea
+              className="w-full h-[8rem]"
               name="message"
               defaultValue={actionData?.values.message}
-              rows={10}
-              cols={50}
+              hasError={!!actionData?.errors.message}
             />
           </label>
 
-          {actionData?.errors.email ? (
-            <p style={{ color: 'red' }}>{actionData.errors.email}</p>
-          ) : null}
-
-          <button type="submit">
+          <button
+            type="submit"
+            className="bg-react text-gray px-8 py-2 rounded-lg hover:bg-light-react duration-200"
+          >
             {transition.state === 'submitting' ? 'Submitting...' : 'Submit'}
           </button>
         </div>

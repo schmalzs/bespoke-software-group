@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <>
       <header className="flex items-center bg-gray font-extrabold text-white text-xl md:text-4xl p-4">
-        <Logo className="fill-transparent stroke-react mr-4 w-8 h-8 md:w-14 md:h-14" />
+        <a href="/">
+          <Logo className="fill-transparent stroke-react mr-4 w-8 h-8 md:w-14 md:h-14" />
+        </a>
         {<h1>Bespoke Software Group</h1>}
       </header>
       <svg
