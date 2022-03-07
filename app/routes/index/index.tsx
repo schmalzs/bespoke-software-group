@@ -1,7 +1,7 @@
-import { redirect, useActionData, useTransition } from 'remix';
+// import { redirect, useActionData, useTransition } from 'remix';
 // import ContactForm from '~/components/ContactForm';
 
-import type { ActionFunction } from 'remix';
+// import type { ActionFunction } from 'remix';
 
 // export const action: ActionFunction = async ({ request }) => {
 //   const formData = await request.formData();
@@ -19,8 +19,8 @@ import type { ActionFunction } from 'remix';
 // };
 
 export default function Index() {
-  const transition = useTransition();
-  const actionData = useActionData();
+  // const transition = useTransition();
+  // const actionData = useActionData();
 
   return (
     <div className="flex flex-col flex-grow items-center">
