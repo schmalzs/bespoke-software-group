@@ -57,8 +57,19 @@ export default function App() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
+        <script src="/gtag.js"></script>
       </head>
       <body className="flex flex-col font-sans bg-white text-gray">
+        <noscript>
+          <iframe
+            title="https://www.googletagmanager.com/ns.html?id=GTM-KRXT593"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KRXT593"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
         <Header />
         <main className="flex-grow flex flex-col">
           <Outlet />
