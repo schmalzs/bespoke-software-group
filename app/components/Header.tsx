@@ -11,7 +11,7 @@ export default function Header() {
         {<h1>Bespoke Software Group</h1>}
       </header>
       <svg
-        className="bg-react h-4 md:h-8"
+        className="bg-react h-4 md:h-8 w-full"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
         version="1.1"
